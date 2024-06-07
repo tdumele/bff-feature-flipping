@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: feature-flipping
+
+security:
+  apikey: 123456

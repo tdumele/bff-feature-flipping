@@ -20,7 +20,8 @@ class FeatureControllerTest {
 
     @Test
     void getFeaturesReturnsAllFeaturesWhenServiceHasFeatures() throws Exception {
-        mockMvc.perform(get("/api/v1/features"))
+        mockMvc.perform(get("/api/v1/features")
+                        .header("X-API-KEY", "123456"))
                 .andExpect(status().isOk());
     }
 }
